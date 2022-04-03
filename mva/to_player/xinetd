@@ -1,0 +1,16 @@
+service easypwn
+{
+    disable     = no
+    type        = UNLISTED
+    wait        = no
+    server      = /bin/sh
+    server_args = -c cd${IFS}/home/ctfer;exec${IFS}./start.sh
+    socket_type = stream
+    protocol    = tcp
+    user        = ctfer
+    port        = 9999
+    flags       = REUSE
+    per_source  = 10    # the maximum instances of this service per source IP address
+    rlimit_cpu  = 1     # the maximum number of CPU seconds that the service may use
+    nice        = 18
+}

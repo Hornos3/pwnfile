@@ -1,0 +1,17 @@
+version: '2.2'
+
+services:
+    pwn:
+        build: ./
+        image: mva
+        volumes:
+            - ./share:/home/ctfer:ro
+            - ./xinetd:/etc/xinetd.d/xinetd:ro
+            - ./tmp:/tmp:ro
+        ports:
+            - "9999:9999"
+        expose:
+            - "9999"
+        pids_limit: 1024
+        cpus: 0.5
+        restart: unless-stopped
