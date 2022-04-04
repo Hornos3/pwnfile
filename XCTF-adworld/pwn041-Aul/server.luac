@@ -1,0 +1,30 @@
+LuaS�
+▒
+xV(w@�,��,�,���,��,�,���,��,�,���CA�$@@C$@�&�
+                                             make_boardpopulate_boardboard_tostringfallrotatecrush
+  rotate_lefreadAllhelpquitexit run_stepgame
+writelinelet's play a game
+
+
+K@J��@@��
+         AF�@
+setmetatable�J��@�f&�size
+            __tostringboard_tostring"
+                                     .�@���A@�@@$Ab@�����@RA, @��@�F�A���AB���Ad������
+@i����A�����h��@d���C�BC���
+��g��F�C�ef&�sizemath
+F@G@�������d���F��@�&&�mathrandom$/!K�@�@�@A������BN�@��(B��A�������'�BA�A@�������$B�����@A���AA���&�
+size| tableinsert |concat
+1D
+G@�@@��������N��(���@�$B'���&�size
+                                  make_board5▒EN���@�@������������_@@�����������������N����&�����OCMÂGC�@'��@��&�size�A������΁��N����(B�C�
+                     make_boardUg
+$G@�@@��������A�A���@�N����(A����'��OA�N����(A�B�G�GB�@@����@����'��&size
+                                                                         make_boardabcdik      F@�@�@��ef&�rotatemr
+                   F@G@����d���������@��@�&�ioopenrbread*allclosetx@@@F�@��d��$��F@A��@ǀ��d@&�stringsureadAll
+             server.luac        writerawlen{@@�&�quit�-F@d���@@��@�����@���A�@����@@�@A�������@����@@�@A�������@����B�@���������B@������&�
+                                                readlinestringlenexitfind       functionprintloareturn ��%@F@@��d$�F�@�A����@��d@F�A�d���A�@@�_�@���@BƀBAB@$�������@���@���&�
+                                                                             populate_board
+                                                                                           make_board
+writelineboard_tostring
+        run_stepquitfallcrushEDidn't understand. Type 'rotate', 'rotate_left', 'exit', or 'help'.

