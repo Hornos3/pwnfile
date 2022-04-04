@@ -1,0 +1,85 @@
+0~3★:入门级别
+4-6★:进阶级别
+7-9★:困难级别
+10-12★:噩梦级别
+13-15★:大神级别
+pwn001(★☆☆☆☆☆☆☆☆☆): ret2text
+pwn002(★★☆☆☆☆☆☆☆☆): ret2shellcode
+pwn003(★☆☆☆☆☆☆☆☆☆): ret2text (Bugku.overflow)
+pwn004(★☆☆☆☆☆☆☆☆☆): ret2syscall (Bugku.overflow2)
+pwn005(★☆☆☆☆☆☆☆☆☆): ret2text (XCTF.level0)
+pwn006(☆☆☆☆☆☆☆☆☆☆): EASY (XCTF.hello_pwn)
+pwn007(★☆☆☆☆☆☆☆☆☆): ret2syscall/ret2libc (XCTF.level2)
+pwn008(★★☆☆☆☆☆☆☆☆): format_string (XCTF.string)
+pwn009(★★★☆☆☆☆☆☆☆): caladdr + ret2libc * 2 (XCTF.level3)
+pwn010(★★☆☆☆☆☆☆☆☆): format_string (XCTF.CGfsb)
+pwn011(★★☆☆☆☆☆☆☆☆): stack_overflow -> srand (XCTF.guess num)
+pwn012(★★☆☆☆☆☆☆☆☆): ret2libc (XCTF.cgpwn2)
+pwn013(★★☆☆☆☆☆☆☆☆): int8_overflow -> backdoor (XCTF.int_overflow)
+pwn014(★★★★☆☆☆☆☆☆): format_string -> .GOT (XCTF.Mary_Morton)
+	注意：此题不用担心输出的字符串太长，即使是几百万个空格也可以很快输出，因为输出是没有限制的，而输入肯定是有限制的，且此题修改在循环过程中会执行的任何系统函数的GOT表项地址均可
+	备注：本题使用泄露canary的方法尚未成功
+pwn015(★★☆☆☆☆☆☆☆☆): ret2syscall/ret2libc + canary (Bugku.canary)
+	解题笔记：在64位程序中，__libc_csu_init函数的最后有一系列的pop操作，虽然其中并没有pop rdi的指令，但最后一个pop r15指令，如果将其2位机器码 (41 5F) 拆开，后面部分实际上就是pop rdi的指令 (5F) 。因此如果需要构造gadget，这里一样可以改变第一个参数的值
+pwn016(★★☆☆☆☆☆☆☆☆): format_string -> got (Bugku.pwn07)
+pwn017(★★★★☆☆☆☆☆☆): LibcSearch + stack_overflow -> system (XCTF.pwn-100)
+pwn018(★☆☆☆☆☆☆☆☆☆): stack_overflow -> srand (XCTF.dice_game)
+pwn019(★☆☆☆☆☆☆☆☆☆): stack_overflow -> function_addr (XCTF.forgot)
+pwn020(★★★☆☆☆☆☆☆☆): fuzz + stack_overflow (XCTF.warmup)
+pwn021(★★☆☆☆☆☆☆☆☆): logical_rw + stack_overflow (XCTF.stack2)
+	解题笔记：本题服务器没有开启/bin/bash的shell，但可以截取该字符串最后两个字节sh，一样可以调用
+pwn022(★★★★☆☆☆☆☆☆): LibcSearch + stack_overflow ('\0' bypassing) (XCTF.welpwn)
+	解题笔记：本题中使用strcmp的地址进行system地址的查找无法使第二个payload打通，而使用write则可以，当一些操作有多种选项时，一种方法不行不妨换一种方法，或许就可以改变现状
+pwn023(★★★★★☆☆☆☆☆): stack_overflow + canary bypassing + libc file (XCTF.pwn1)
+pwn024(★★☆☆☆☆☆☆☆☆): JSshell<os.system()> (XCTF.monkey)
+pwn025(★★★★☆☆☆☆☆☆): DynELF + stack_overflow (XCTF.pwn200)
+pwn026(★★★★☆☆☆☆☆☆): UseAfterFree (XCTF.time_formatter)
+pwn027(★★☆☆☆☆☆☆☆☆): stack_overflow (XCTF.反应釜开关控制)
+pwn028(★★☆☆☆☆☆☆☆☆): format_string (XCTF.实时数据监测)
+pwn029(★★★★★★★☆☆☆): array_overflow + change_got + shellcode (XCTF.note-service2)
+	注：本题本地打不通，远程可以
+	解题笔记：遇到含有malloc和free的程序，不要想当然就认为是考察堆漏洞，而要注意这个程序中会存在什么漏洞，不要被误导
+pwn030(★★★★★★☆☆☆☆): use_after_free + logical_error (l3hCTF.learn_fastbin)
+pwn031(★★★★★★★☆☆☆): stack_overflow + single_payload -> code construction (XCTF.Recho)
+	解题笔记：如果只能由一次泄露payload的机会，可以尝试使用syscall调用很多的系统函数。一些常用的系统函数有系统调用号，一般在syscall之前保存在eax寄存器中，只要能够配置好所有的寄存器值，再跳转到syscall就可以实现代码的执行。如果在pwn程序中没有发现syscall的指令，可以查看libc文件，凡是可以使用syscall调用的函数在libc文件中的开头处都会有syscall指令，如果可以找到方法调用到此处，也可以实现代码的执行
+pwn032(★★★★★★☆☆☆☆): stack_migration * 2 (l3hCTF.rop_register)
+	解题笔记：栈迁移适用于溢出长度过小而无法编写payload时使用，需要注意的是，栈迁移之后栈的上下需要保留足够长度的可读写内存，因为一些函数(read, printf, etc.)需要使用栈前后的内存进行一些操作，如果留出的额外内存不足，会导致程序访问未经允许的内存空间报Segmentation Fault。本题中前后申请了40个长度为0x210的空间才能在服务器上面打通。
+	解题笔记：另外，有时脚本的输入流过多可能会导致服务器执行问题，某些地方的代码可能无法显示结果，此时不妨使用sleep等待一小会，使服务器工作更加流畅
+	解题笔记：如果不明白程序什么地方出错，可以查看程序异常退出后的core文件：gdb -c core
+pwn033(★★★★★★☆☆☆☆): use_after_free + logical_error (l3hCTF.learn_fastbin_G)
+pwn034(★★★★☆☆☆☆☆☆): format_string -> post_main_func (XCTF.greeting-150)
+	解题笔记：got表除了在那些标红的地区之外，还有几处是在外面，标志着起始函数和终止函数的地址，或许可以称为main函数重载的方法
+pwn035(★★★★☆☆☆☆☆☆): stack_overflow (XCTF.secret file)
+	解题笔记：有的时候不要把问题想的太复杂，可能你已经想到了解决的方法，但是在细节上总是不敢下手。为何不从最简单的情况开始尝试呢？
+pwn036(★★★★★★☆☆☆☆): use_after_free(realloc) (XCTF.supermarket)
+	解题笔记：有的时候，LibcSearcher可能并不管用，如果题目中已经给了libc文件，那么应该首先考虑使用这个文件中的地址，本题使用LibcSearcher解析出来的地址就和文件中的地址不一样，导致攻击失败
+pwn037(★★★★★★★☆☆☆): heap_overflow -> unlink + no_NX + UAF + malloc_hook -> unsorted_bin_attack (XCTF.Noleak)
+	解题笔记：理解本题的精髓在于如何将堆空间引导到bss段中。通过UAF漏洞，我们可以将新的堆空间引导到存放有堆空间指针的地方，重点是满足系统的判断条件：this->fd->bk = this，this->bk->fd = this。其次，还需要了解__malloc_hook的利用方法。只要获得了main arena的地址，就可以获得hook的地址，进而注入shellcode，无需程序输出也可以实现。
+pwn038(★★★★★★☆☆☆☆): int_exploit + stack_overflow / unlink <unfinished> (XCTF.4-ReeHY-main-100)
+	解题笔记：本题有多种get shell的方式，原本常规的方式应该是堆漏洞获取，但由于整型漏洞的存在，使得我们也可以通过栈溢出获取shell。malloc函数虽然不能分配0xFFFFFFFFFFFFFFFF这么大的地址空间，但也仅仅只是返回一个空指针而已，如果进行了栈溢出，不会影响程序的正常执行
+pwn039(★★★★★☆☆☆☆☆): logical + heap_overflow -> got (XCTF.babyfengshui)
+	注：本题的远程服务器的libc地址竟然在LibcSearcher上面找不到
+pwn040(★★★★★★☆☆☆☆): stack_overflow + vsyscall -> onegadget (XCTF.1000levels)
+	解题笔记：PIE开启时的栈溢出新姿势：vsyscall(0xffffffffff600000)
+pwn041(★★★★★★☆☆☆☆): fuzz + .luac (XCTF.Aul) <<hardly seen>>
+pwn042(★★★★☆☆☆☆☆☆): UAF (XCTF.hacknote)
+pwn043(★★★★★☆☆☆☆☆): stack_overflow [+brute] (XCTF.format2)
+pwn044(★★★★★★★☆☆☆): scanf_exploit + ROP (XCTF.echo_back)
+	解题笔记：本题通过攻击scanf的方式增加了可以输入的长度，是本题的关键所在
+pwn045(★★★★★★☆☆☆☆): uncleared_buffer_leak + ROP + pivot (XCTF.dubblesort)
+pwn046(★★★★★☆☆☆☆☆): heap_overflow + ROP (XCTF.RCalc)
+	解题笔记：scanf写入字符串注意不要有空格
+pwn047(★★★★★★★★☆☆): format_string + GOT (XCTF.easypwn)
+	解题笔记：本题的步骤较为复杂，要注意printf系列读取格式字符串的方式是一个格式一个格式地读取，因此在sprintf读取过程中会同时进行字符串的复制操作，因此在此时将格式化字符串后面的部分修改是有可能产生格式化字符串漏洞的，这是格式化字符串漏洞的一种新形式。
+pwn048(★★★★☆☆☆☆☆☆): format_string + GOT (XCTF.easyfmt)
+pwn049(★★☆☆☆☆☆☆☆☆): format_string + stack_overflow (l3hctf.hellopwn)
+pwn050(★★★★★★☆☆☆☆): unsorted-bin-attack + tcache-attack + __free_hook (l3hctf.icecream)
+pwn051(★☆☆☆☆☆☆☆☆☆): unique_shellcode_of_writable_chars (l3hctf.shellcode)
+pwn052(★☆☆☆☆☆☆☆☆☆): BOF + canary (l3hctf.easystack)
+pwn053(★★★☆☆☆☆☆☆☆): stack_overflow (XCTF.HMI流水灯运行)
+	解题笔记：不要被题目花里胡哨的表象所迷惑。
+pwn054(★★★★☆☆☆☆☆☆): ROP -> int_80h (XCTF.250)
+	解题笔记：另外一种思路是使用mprotect函数修改bss段的权限为可读可写可执行，然后使用read函数写入shell执行即可
+pwn055(★★★★★★★★☆☆): <unsolved> (XCTF.house_of_grey)
+pwn056(★★★★★★★★☆☆): null-off-by-one + malloc_hook + realloc_hook (XCTF.babyheap)
+	解题笔记：本题涉及的知识点较多，其中需要重点理解null-off-by-one漏洞的一种用法————减小后方chunk大小、伪造prev_size以造成free异常的堆重叠。另外，one_gadget有时不可用，需要使用realloc_hook调整栈环境以进行中转。
