@@ -55,7 +55,7 @@ pwn036(★★★★★★☆☆☆☆): use_after_free(realloc) (XCTF.supermarke
 	解题笔记：有的时候，LibcSearcher可能并不管用，如果题目中已经给了libc文件，那么应该首先考虑使用这个文件中的地址，本题使用LibcSearcher解析出来的地址就和文件中的地址不一样，导致攻击失败
 pwn037(★★★★★★★☆☆☆): heap_overflow -> unlink + no_NX + UAF + malloc_hook -> unsorted_bin_attack (XCTF.Noleak)
 	解题笔记：理解本题的精髓在于如何将堆空间引导到bss段中。通过UAF漏洞，我们可以将新的堆空间引导到存放有堆空间指针的地方，重点是满足系统的判断条件：this->fd->bk = this，this->bk->fd = this。其次，还需要了解__malloc_hook的利用方法。只要获得了main arena的地址，就可以获得hook的地址，进而注入shellcode，无需程序输出也可以实现。
-pwn038(★★★★★★☆☆☆☆): int_exploit + stack_overflow / unlink <unfinished> (XCTF.4-ReeHY-main-100)
+pwn038(★★★★★★☆☆☆☆): (int_exploit + stack_overflow) + unlink (XCTF.4-ReeHY-main-100)
 	解题笔记：本题有多种get shell的方式，原本常规的方式应该是堆漏洞获取，但由于整型漏洞的存在，使得我们也可以通过栈溢出获取shell。malloc函数虽然不能分配0xFFFFFFFFFFFFFFFF这么大的地址空间，但也仅仅只是返回一个空指针而已，如果进行了栈溢出，不会影响程序的正常执行
 pwn039(★★★★★☆☆☆☆☆): logical + heap_overflow -> got (XCTF.babyfengshui)
 	注：本题的远程服务器的libc地址竟然在LibcSearcher上面找不到
