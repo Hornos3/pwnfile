@@ -1,0 +1,2 @@
+NOTE: In this problem, we need to write a direct 'ret' to the top of ROP chain
+	to adjust the stack, avoiding 'timeout: ... monitored dump core...'
