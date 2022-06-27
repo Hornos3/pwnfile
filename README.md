@@ -7,3 +7,5 @@ If you have any problem or find something wrong in my blog, please make comments
 Thanks!
 
 - Note: This program has been tested by OSCS, proved security.
+
+[![OSCS Status](https://www.oscs1024.com/platform/badge/Hornos3/pwnfile.svg?size=small)](https://www.oscs1024.com/project/Hornos3/pwnfile?ref=badge_small)
