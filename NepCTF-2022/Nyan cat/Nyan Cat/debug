@@ -1,0 +1,647 @@
+================================================================================
+= Started at 2022-07-15T15:57:21                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:57:21:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T15:57:21:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T15:57:21                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:57:21:INFO:pwnlib.tubes.process.process.140607782060768:Starting local process './main'
+2022-07-15T15:57:21:INFO:pwnlib.tubes.process.process.140607782060768:Starting local process './main': pid 9468
+2022-07-15T15:57:21:INFO:pwnlib.gdb:running in new terminal: ['/usr/bin/gdb', '-q', './main', '9468']
+2022-07-15T15:57:21:DEBUG:pwnlib.util.misc:Created script for new terminal:
+#!/usr/bin/python3
+import os
+os.execve('/usr/bin/gdb', ['/usr/bin/gdb', '-q', './main', '9468'], os.environ)
+
+2022-07-15T15:57:21:DEBUG:pwnlib.util.misc:Launching a new terminal: ['/usr/bin/x-terminal-emulator', '-e', '/tmp/tmpmof9b66n']
+================================================================================
+= Started at 2022-07-15T15:57:21                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:57:21:INFO:pwnlib.util.proc:Waiting for debugger
+2022-07-15T15:57:21:INFO:pwnlib.util.proc:Waiting for debugger: Done
+2022-07-15T15:57:24:INFO:pwnlib.tubes.process.process.140607782060768:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T15:57:24                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:57:51:INFO:pwnlib.tubes.process.process.140607782060768:Interrupted
+================================================================================
+= Started at 2022-07-15T15:57:51                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+================================================================================
+= Started at 2022-07-15T15:57:51                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:57:51:INFO:pwnlib.tubes.process.process.140607782060768:Stopped process './main' (pid 9468)
+================================================================================
+= Started at 2022-07-15T15:58:04                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:58:04:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T15:58:04:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T15:58:04                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:58:04:INFO:pwnlib.tubes.process.process.139869649789712:Starting local process './main'
+2022-07-15T15:58:04:INFO:pwnlib.tubes.process.process.139869649789712:Starting local process './main': pid 9504
+2022-07-15T15:58:04:INFO:pwnlib.gdb:running in new terminal: ['/usr/bin/gdb', '-q', './main', '9504']
+2022-07-15T15:58:04:DEBUG:pwnlib.util.misc:Created script for new terminal:
+#!/usr/bin/python3
+import os
+os.execve('/usr/bin/gdb', ['/usr/bin/gdb', '-q', './main', '9504'], os.environ)
+
+2022-07-15T15:58:04:DEBUG:pwnlib.util.misc:Launching a new terminal: ['/usr/bin/x-terminal-emulator', '-e', '/tmp/tmp_pvucu85']
+================================================================================
+= Started at 2022-07-15T15:58:04                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:58:04:INFO:pwnlib.util.proc:Waiting for debugger
+2022-07-15T15:58:05:INFO:pwnlib.util.proc:Waiting for debugger: Done
+2022-07-15T15:58:08:INFO:pwnlib.tubes.process.process.139869649789712:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T15:58:08                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:59:01:INFO:pwnlib.tubes.process.process.139869649789712:Interrupted
+================================================================================
+= Started at 2022-07-15T15:59:01                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+================================================================================
+= Started at 2022-07-15T15:59:01                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:59:01:INFO:pwnlib.tubes.process.process.139869649789712:Stopped process './main' (pid 9504)
+================================================================================
+= Started at 2022-07-15T15:59:02                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:59:02:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T15:59:02:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T15:59:02                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:59:02:INFO:pwnlib.tubes.process.process.140043867554576:Starting local process './main'
+2022-07-15T15:59:02:INFO:pwnlib.tubes.process.process.140043867554576:Starting local process './main': pid 9559
+2022-07-15T15:59:02:INFO:pwnlib.gdb:running in new terminal: ['/usr/bin/gdb', '-q', './main', '9559']
+2022-07-15T15:59:02:DEBUG:pwnlib.util.misc:Created script for new terminal:
+#!/usr/bin/python3
+import os
+os.execve('/usr/bin/gdb', ['/usr/bin/gdb', '-q', './main', '9559'], os.environ)
+
+2022-07-15T15:59:02:DEBUG:pwnlib.util.misc:Launching a new terminal: ['/usr/bin/x-terminal-emulator', '-e', '/tmp/tmpmhytetud']
+================================================================================
+= Started at 2022-07-15T15:59:02                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T15:59:02:INFO:pwnlib.util.proc:Waiting for debugger
+2022-07-15T15:59:02:INFO:pwnlib.util.proc:Waiting for debugger: Done
+2022-07-15T15:59:05:INFO:pwnlib.tubes.process.process.140043867554576:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T15:59:05                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:13:25:INFO:pwnlib.tubes.process.process.140043867554576:Interrupted
+================================================================================
+= Started at 2022-07-15T16:13:25                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+================================================================================
+= Started at 2022-07-15T16:13:25                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:13:25:INFO:pwnlib.tubes.process.process.140043867554576:Stopped process './main' (pid 9559)
+================================================================================
+= Started at 2022-07-15T16:13:25                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:13:25:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T16:13:25:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T16:13:25                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:13:25:INFO:pwnlib.tubes.process.process.140522547315472:Starting local process './main'
+2022-07-15T16:13:25:INFO:pwnlib.tubes.process.process.140522547315472:Starting local process './main': pid 9645
+2022-07-15T16:13:26:INFO:pwnlib.gdb:running in new terminal: ['/usr/bin/gdb', '-q', './main', '9645']
+2022-07-15T16:13:26:DEBUG:pwnlib.util.misc:Created script for new terminal:
+#!/usr/bin/python3
+import os
+os.execve('/usr/bin/gdb', ['/usr/bin/gdb', '-q', './main', '9645'], os.environ)
+
+2022-07-15T16:13:26:DEBUG:pwnlib.util.misc:Launching a new terminal: ['/usr/bin/x-terminal-emulator', '-e', '/tmp/tmprxa1y052']
+================================================================================
+= Started at 2022-07-15T16:13:26                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:13:26:INFO:pwnlib.util.proc:Waiting for debugger
+2022-07-15T16:13:26:INFO:pwnlib.util.proc:Waiting for debugger: Done
+2022-07-15T16:13:29:INFO:pwnlib.tubes.process.process.140522547315472:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T16:13:29                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:19:53:INFO:pwnlib.tubes.process.process.140522547315472:Interrupted
+================================================================================
+= Started at 2022-07-15T16:19:53                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+================================================================================
+= Started at 2022-07-15T16:19:53                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:19:53:INFO:pwnlib.tubes.process.process.140522547315472:Stopped process './main' (pid 9645)
+================================================================================
+= Started at 2022-07-15T16:19:53                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:19:53:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T16:19:53:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T16:19:53                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:19:53:INFO:pwnlib.tubes.process.process.140432614282000:Starting local process './main'
+2022-07-15T16:19:53:INFO:pwnlib.tubes.process.process.140432614282000:Starting local process './main': pid 9736
+2022-07-15T16:19:53:INFO:pwnlib.gdb:running in new terminal: ['/usr/bin/gdb', '-q', './main', '9736']
+2022-07-15T16:19:53:DEBUG:pwnlib.util.misc:Created script for new terminal:
+#!/usr/bin/python3
+import os
+os.execve('/usr/bin/gdb', ['/usr/bin/gdb', '-q', './main', '9736'], os.environ)
+
+2022-07-15T16:19:53:DEBUG:pwnlib.util.misc:Launching a new terminal: ['/usr/bin/x-terminal-emulator', '-e', '/tmp/tmp0o06oa2t']
+================================================================================
+= Started at 2022-07-15T16:19:53                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:19:53:INFO:pwnlib.util.proc:Waiting for debugger
+2022-07-15T16:19:54:INFO:pwnlib.util.proc:Waiting for debugger: Done
+2022-07-15T16:19:57:INFO:pwnlib.tubes.process.process.140432614282000:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T16:19:57                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:20:53:INFO:pwnlib.tubes.process.process.140432614282000:Interrupted
+================================================================================
+= Started at 2022-07-15T16:20:53                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+================================================================================
+= Started at 2022-07-15T16:20:53                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:20:53:INFO:pwnlib.tubes.process.process.140432614282000:Stopped process './main' (pid 9736)
+================================================================================
+= Started at 2022-07-15T16:20:54                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:20:54:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T16:20:54:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T16:20:54                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:20:54:INFO:pwnlib.tubes.process.process.140591984644880:Starting local process './main'
+2022-07-15T16:20:54:INFO:pwnlib.tubes.process.process.140591984644880:Starting local process './main': pid 9791
+2022-07-15T16:20:54:INFO:pwnlib.gdb:running in new terminal: ['/usr/bin/gdb', '-q', './main', '9791']
+2022-07-15T16:20:54:DEBUG:pwnlib.util.misc:Created script for new terminal:
+#!/usr/bin/python3
+import os
+os.execve('/usr/bin/gdb', ['/usr/bin/gdb', '-q', './main', '9791'], os.environ)
+
+2022-07-15T16:20:54:DEBUG:pwnlib.util.misc:Launching a new terminal: ['/usr/bin/x-terminal-emulator', '-e', '/tmp/tmpink_0zur']
+================================================================================
+= Started at 2022-07-15T16:20:54                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:20:54:INFO:pwnlib.util.proc:Waiting for debugger
+2022-07-15T16:20:54:INFO:pwnlib.util.proc:Waiting for debugger: Done
+2022-07-15T16:20:57:INFO:pwnlib.tubes.process.process.140591984644880:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T16:20:57                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:21:33:INFO:pwnlib.tubes.process.process.140591984644880:Got EOF while reading in interactive
+2022-07-15T16:21:33:INFO:pwnlib.tubes.process.process.140591984644880:Interrupted
+================================================================================
+= Started at 2022-07-15T16:21:33                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+================================================================================
+= Started at 2022-07-15T16:21:33                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:21:33:INFO:pwnlib.tubes.process.process.140591984644880:Process './main' stopped with exit code -11 (SIGSEGV) (pid 9791)
+================================================================================
+= Started at 2022-07-15T16:21:34                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:21:34:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T16:21:34:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T16:21:34                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:21:34:INFO:pwnlib.tubes.process.process.139811446522688:Starting local process './main'
+2022-07-15T16:21:34:INFO:pwnlib.tubes.process.process.139811446522688:Starting local process './main': pid 9829
+2022-07-15T16:21:34:INFO:pwnlib.gdb:running in new terminal: ['/usr/bin/gdb', '-q', './main', '9829']
+2022-07-15T16:21:34:DEBUG:pwnlib.util.misc:Created script for new terminal:
+#!/usr/bin/python3
+import os
+os.execve('/usr/bin/gdb', ['/usr/bin/gdb', '-q', './main', '9829'], os.environ)
+
+2022-07-15T16:21:34:DEBUG:pwnlib.util.misc:Launching a new terminal: ['/usr/bin/x-terminal-emulator', '-e', '/tmp/tmpf5hp1xvx']
+================================================================================
+= Started at 2022-07-15T16:21:34                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:21:34:INFO:pwnlib.util.proc:Waiting for debugger
+2022-07-15T16:21:34:INFO:pwnlib.util.proc:Waiting for debugger: Done
+2022-07-15T16:21:37:INFO:pwnlib.tubes.process.process.139811446522688:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T16:21:37                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:28:12:INFO:pwnlib.tubes.process.process.139811446522688:Got EOF while reading in interactive
+2022-07-15T16:28:13:INFO:pwnlib.tubes.process.process.139811446522688:Interrupted
+================================================================================
+= Started at 2022-07-15T16:28:13                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+================================================================================
+= Started at 2022-07-15T16:28:13                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:28:13:INFO:pwnlib.tubes.process.process.139811446522688:Process './main' stopped with exit code -11 (SIGSEGV) (pid 9829)
+================================================================================
+= Started at 2022-07-15T16:28:13                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:28:13:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T16:28:13:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T16:28:13                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:28:13:INFO:pwnlib.tubes.process.process.140510154474352:Starting local process './main'
+2022-07-15T16:28:13:INFO:pwnlib.tubes.process.process.140510154474352:Starting local process './main': pid 9906
+2022-07-15T16:28:13:INFO:pwnlib.gdb:running in new terminal: ['/usr/bin/gdb', '-q', './main', '9906']
+2022-07-15T16:28:13:DEBUG:pwnlib.util.misc:Created script for new terminal:
+#!/usr/bin/python3
+import os
+os.execve('/usr/bin/gdb', ['/usr/bin/gdb', '-q', './main', '9906'], os.environ)
+
+2022-07-15T16:28:13:DEBUG:pwnlib.util.misc:Launching a new terminal: ['/usr/bin/x-terminal-emulator', '-e', '/tmp/tmpx9xb43of']
+================================================================================
+= Started at 2022-07-15T16:28:13                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:28:13:INFO:pwnlib.util.proc:Waiting for debugger
+2022-07-15T16:28:14:INFO:pwnlib.util.proc:Waiting for debugger: Done
+2022-07-15T16:28:17:INFO:pwnlib.tubes.process.process.140510154474352:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T16:28:17                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:36:38:INFO:pwnlib.tubes.process.process.140510154474352:Got EOF while reading in interactive
+2022-07-15T16:36:39:INFO:pwnlib.tubes.process.process.140510154474352:Interrupted
+================================================================================
+= Started at 2022-07-15T16:36:39                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+================================================================================
+= Started at 2022-07-15T16:36:39                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:36:39:INFO:pwnlib.tubes.process.process.140510154474352:Process './main' stopped with exit code -11 (SIGSEGV) (pid 9906)
+================================================================================
+= Started at 2022-07-15T16:36:39                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:36:39:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T16:36:39:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T16:36:39                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:36:39:INFO:pwnlib.tubes.process.process.139737677038448:Starting local process './main'
+2022-07-15T16:36:39:INFO:pwnlib.tubes.process.process.139737677038448:Starting local process './main': pid 10002
+2022-07-15T16:36:40:INFO:pwnlib.gdb:running in new terminal: ['/usr/bin/gdb', '-q', './main', '10002']
+2022-07-15T16:36:40:DEBUG:pwnlib.util.misc:Created script for new terminal:
+#!/usr/bin/python3
+import os
+os.execve('/usr/bin/gdb', ['/usr/bin/gdb', '-q', './main', '10002'], os.environ)
+
+2022-07-15T16:36:40:DEBUG:pwnlib.util.misc:Launching a new terminal: ['/usr/bin/x-terminal-emulator', '-e', '/tmp/tmpdzrelk2z']
+================================================================================
+= Started at 2022-07-15T16:36:40                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:36:40:INFO:pwnlib.util.proc:Waiting for debugger
+2022-07-15T16:36:40:INFO:pwnlib.util.proc:Waiting for debugger: Done
+2022-07-15T16:36:43:INFO:pwnlib.tubes.process.process.139737677038448:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T16:36:43                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:41:41:INFO:pwnlib.tubes.process.process.139737677038448:Got EOF while reading in interactive
+2022-07-15T16:41:42:INFO:pwnlib.tubes.process.process.139737677038448:Interrupted
+================================================================================
+= Started at 2022-07-15T16:41:42                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+================================================================================
+= Started at 2022-07-15T16:41:42                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:41:42:INFO:pwnlib.tubes.process.process.139737677038448:Process './main' stopped with exit code 0 (pid 10002)
+================================================================================
+= Started at 2022-07-15T16:41:43                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:41:43:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T16:41:43:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T16:41:43                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:41:43:INFO:pwnlib.tubes.process.process.139975510250352:Starting local process './main'
+2022-07-15T16:41:43:INFO:pwnlib.tubes.process.process.139975510250352:Starting local process './main': pid 10061
+2022-07-15T16:41:43:INFO:pwnlib.gdb:running in new terminal: ['/usr/bin/gdb', '-q', './main', '10061']
+2022-07-15T16:41:43:DEBUG:pwnlib.util.misc:Created script for new terminal:
+#!/usr/bin/python3
+import os
+os.execve('/usr/bin/gdb', ['/usr/bin/gdb', '-q', './main', '10061'], os.environ)
+
+2022-07-15T16:41:43:DEBUG:pwnlib.util.misc:Launching a new terminal: ['/usr/bin/x-terminal-emulator', '-e', '/tmp/tmp7jds9e81']
+================================================================================
+= Started at 2022-07-15T16:41:43                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:41:43:INFO:pwnlib.util.proc:Waiting for debugger
+2022-07-15T16:41:43:INFO:pwnlib.util.proc:Waiting for debugger: Done
+2022-07-15T16:41:46:INFO:pwnlib.tubes.process.process.139975510250352:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T16:41:46                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:42:12:INFO:pwnlib.tubes.process.process.139975510250352:Interrupted
+================================================================================
+= Started at 2022-07-15T16:42:12                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+================================================================================
+= Started at 2022-07-15T16:42:12                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:42:12:INFO:pwnlib.tubes.process.process.139975510250352:Stopped process './main' (pid 10061)
+================================================================================
+= Started at 2022-07-15T16:42:23                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:42:23:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T16:42:23:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T16:42:23                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:42:23:INFO:pwnlib.tubes.process.process.139772688696176:Starting local process './main'
+2022-07-15T16:42:23:INFO:pwnlib.tubes.process.process.139772688696176:Starting local process './main': pid 10090
+2022-07-15T16:42:23:INFO:pwnlib.tubes.process.process.139772688696176:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T16:42:23                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:42:26:INFO:pwnlib.tubes.process.process.139772688696176:Interrupted
+================================================================================
+= Started at 2022-07-15T16:42:26                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:42:26:INFO:pwnlib.tubes.process.process.139772688696176:Stopped process './main' (pid 10090)
+================================================================================
+= Started at 2022-07-15T16:43:01                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:43:01:DEBUG:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main' is statically linked, skipping GOT/PLT symbols
+2022-07-15T16:43:01:INFO:pwnlib.elf.elf:'/root/Desktop/competition temp/Nyan cat/Nyan Cat/main'
+Arch:     i386-32-little
+RELRO:    [31mNo RELRO[m
+Stack:    [31mNo canary found[m
+NX:       [32mNX enabled[m
+PIE:      [31mNo PIE (0x8048000)[m
+================================================================================
+= Started at 2022-07-15T16:43:01                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-15T16:43:01:INFO:pwnlib.tubes.remote.remote.140239928800112:Opening connection to nep.lemonprefect.cn on port 29308
+2022-07-15T16:43:01:INFO:pwnlib.tubes.remote.remote.140239928800112:Opening connection to nep.lemonprefect.cn on port 29308: Trying 222.187.239.143
+2022-07-15T16:43:01:INFO:pwnlib.tubes.remote.remote.140239928800112:Opening connection to nep.lemonprefect.cn on port 29308: Done
+2022-07-15T16:43:01:INFO:pwnlib.tubes.remote.remote.140239928800112:Switching to interactive mode
+================================================================================
+= Started at 2022-07-15T16:43:01                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-16T00:05:09:INFO:pwnlib.tubes.remote.remote.140239928800112:Interrupted
+================================================================================
+= Started at 2022-07-16T00:05:10                                               =
+= sys.argv = [                                                                 =
+=   'exp.py',                                                                  =
+= ]                                                                            =
+================================================================================
+2022-07-16T00:05:10:INFO:pwnlib.tubes.remote.remote.140239928800112:Closed connection to nep.lemonprefect.cn port 29308

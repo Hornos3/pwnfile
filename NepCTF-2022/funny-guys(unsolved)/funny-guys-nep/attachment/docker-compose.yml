@@ -1,0 +1,7 @@
+version: "2"
+services:
+  xadmin:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "16666:90"

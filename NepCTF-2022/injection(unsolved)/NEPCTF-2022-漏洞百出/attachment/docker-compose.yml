@@ -1,0 +1,7 @@
+version: "2"
+services:
+  injection:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "12240:8888"

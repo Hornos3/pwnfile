@@ -1,0 +1,94 @@
+<!doctype html>
+<html  class="x-admin-sm">
+	<head>
+		<meta charset="UTF-8">
+		<title>AMALLL+H3H3QAQ生成机</title>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link rel="stylesheet" href="./css/font.css">
+		<link rel="stylesheet" href="./css/xadmin.css">
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script src="./lib/layui/layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="./js/xadmin.js"></script>
+		<script type="text/javascript" src="./js/cookie.js"></script>
+		<script type="text/javascript" src="./js/vue.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.sha1.js"></script>
+	</head>
+	<body class="login-bg" style="min-width:499px;">
+			<p>border-radius：300px</p>
+		<div class="login layui-anim layui-anim-up" id="login">
+			<div class="message">NEP-CTF-2022-WELCOME</div>
+			<div id="darkbannerwrap"></div>
+			<form method="post" class="layui-form" >
+				<input name="contents" v-model="contents" placeholder="contents"  type="text" lay-verify="required" class="layui-input">
+				<hr class="hr15">
+
+				<input name="size" v-model="size" placeholder="size"  type="text" lay-verify="required" class="layui-input">
+				<hr class="hr15">
+
+				<input name="index" v-model="index" placeholder="index"  type="text" lay-verify="required" class="layui-input">
+				<hr class="hr15">
+
+				<input name="option" v-model="option" lay-verify="required" placeholder="option"  type="option" @keyup.enter="login" class="layui-input">
+				<hr class="hr15">
+
+				<input value="进入新大陆" lay-submit lay-filter="login" style="width:100%;" type="button" @click="login" >
+				<hr class="hr20" >
+			</form>
+		</div>
+				<script type="text/javascript">
+					var vm = new Vue({
+						el: "#login",
+						data: {
+							contents: '',
+							option: '',
+							index: '',
+							size: ''
+						},
+						methods: {
+							login: function(event) {
+								var contents = vm.contents;
+								var option = vm.option;
+								var index = vm.index;
+								var size = vm.size;
+								if (index.length==0||size.length==0||contents.length == 0 || option.length == 0) {
+									return false;
+								}
+								$.ajax({
+									url: "heap.action",
+									type:"POST",
+									data: {
+										contents:vm.contents,
+										option:vm.option,
+										index:vm.index,
+										size:vm.size
+									},
+									dataType: "json",
+									success: function(result) {
+										console.log("123");
+										console.log(result);
+										if (result.success) {
+											sessionStorage.setItem('login',true);
+											layer.msg("SUCCESS");
+										}else{
+											sessionStorage.setItem('login',false);
+											layer.msg("FAILE",function(){window.location.href="login.html"});
+										}
+									}
+								});
+							}
+						},
+						created: function() {
+							//检查是否登陆
+							var login =sessionStorage.getItem("login");
+							if (login=='true'){
+								//window.location.href = "index.html";
+							}
+						}
+					});
+
+				</script>
+	</body>
+</html>

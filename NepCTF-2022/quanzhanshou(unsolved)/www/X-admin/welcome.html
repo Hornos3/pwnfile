@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+		<link rel="stylesheet" href="./css/font.css">
+		<link rel="stylesheet" href="./css/xadmin.css">
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script src="./lib/layui/layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="./js/xadmin.js"></script>
+		<script type="text/javascript" src="./js/cookie.js"></script>
+		<script type="text/javascript" src="./js/vue.min.js"></script>
+	</head>
+	<body>
+		<div class="x-body" id="welcome">
+			<blockquote class="layui-elem-quote">欢迎来到NEP-CTF-2022：
+				<span class="x-red">{{userName}}</span>！登陆时间:{{loginTime}}</blockquote>
+	   <fieldset class="layui-elem-field">
+	   <legend>flag数据统计</legend>
+	   <div class="layui-field-box">
+	   <div class="layui-col-md12">
+	   <div class="layui-card">
+	   <div class="layui-card-body">
+	   <div class="layui-carousel x-admin-carousel x-admin-backlog" lay-anim="" lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 90px;">
+	   <div carousel-item="">
+	   <ul class="layui-row layui-col-space10 layui-this">
+	   <li class="layui-col-xs2">
+	   <a href="javascript:;" class="x-admin-backlog-body">
+	   <h3>flag生成速率</h3>
+	   <p>
+	   <cite>100 Byte/s</cite></p>
+	   </a>
+	   </li>
+	   <li class="layui-col-xs2">
+	   <a href="javascript:;" class="x-admin-backlog-body">
+	   <h3>flag读取速率</h3>
+	   <p>
+	   <cite>100 Byte/s</cite></p>
+	   </a>
+	   </li>
+	   <li class="layui-col-xs2">
+	   <a href="javascript:;" class="x-admin-backlog-body">
+	   <h3>剩余flag量</h3>
+	   <p>
+	   <cite>100 Byte</cite></p>
+	   </a>
+	   </li>
+	   <li class="layui-col-xs2">
+	   <a href="javascript:;" class="x-admin-backlog-body">
+	   <h3>flag生存速率</h3>
+	   <p>
+	   <cite>100 bps</cite></p>
+	   </a>
+	   </li>
+	   <li class="layui-col-xs2">
+	   <a href="javascript:;" class="x-admin-backlog-body">
+	   <h3>原始flag生存速率</h3>
+	   <p>
+	   <cite>100 bps</cite></p>
+	   </a>
+	   </li>
+	   <li class="layui-col-xs2">
+	   <a href="javascript:;" class="x-admin-backlog-body">
+	   <h3>误码率</h3>
+	   <p>
+	   <cite>0 %</cite></p>
+	   </a>
+	   </li>
+	   </ul>
+	   </div>
+	   </div>
+	   </div>
+	   </div>
+	   </div>
+	   </div>
+	   </fieldset>
+			<fieldset class="layui-elem-field">
+				<legend>系统信息</legend>
+				<div class="layui-field-box">
+					<table class="layui-table">
+						<tbody>
+							<tr>
+								<th>设备时间</th>
+								<td>{{curtime}}</td></tr>
+							<tr>
+								<th>CPU使用率</th>
+								<td>100%</td></tr>
+							<tr>
+								<th>运行时长</th>
+								<td>{{runtimeText}}</td></tr>
+							<tr>
+								<th>总内存</th>
+								<td>{{totalram}} bytes</td></tr>
+							<tr>
+								<th>内存使用率</th>
+								<td>{{memuse}}%</td></tr>
+							<tr>
+								<th>接收数据</th>
+								<td>{{rx}} bytes</td></tr>
+							<tr>
+								<th>发送数据</th>
+								<td>{{tx}} bytes</td></tr>
+							<tr>
+								<th>软件版本</th>
+								<td>v1.0</td></tr>
+							<tr>
+								<th>操作系统</th>
+								<td>Ubuntu-20.04</td></tr>
+							<tr>
+								<th>服务器</th>
+								<td>tiny-httpd</td></tr>
+							<tr>
+								<th>RC4-KEY</th>
+								<td>NEPNEP</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</fieldset>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#welcome',
+			data:{
+				userName:'',
+				loginTime:'',
+				curtime:'',
+				totalram:0,
+				memuse:0,
+				uptime:0,
+				cpuuse:0,
+				rx:0,
+				tx:0
+			},
+			computed: {
+				//计算时间
+				runtimeText: function() {
+					var seconds = this.uptime;
+					var day = parseInt(seconds / 60 / 60 / 24);
+					var hour = parseInt(seconds % (60 * 60 * 24) / 60 / 60);
+					var min = parseInt(seconds % (60 * 60) / 60);
+					var sec = seconds % 60;
+					return day + "天" + hour + "小时" + min + "分" + sec + "秒";
+				}
+			},
+			created:function(){
+				//检查是否登陆
+				var login = sessionStorage.getItem("login");
+
+				if (login!='true'){
+					window.parent.location.href = "login.html";
+					return;
+				}
+				$.ajax({
+					url: "main_load.action",
+					data: {},
+					type:"GET",
+					dataType: "json",
+					success: function(result) {
+						if (result.unlogin) {
+							sessionStorage.setItem("login",false);
+							window.parent.location = "login.html";
+							return;
+						}
+						vm.userName=result.userName;
+						vm.loginTime=result.loginTime;
+						vm.curtime=result.curtime;
+						vm.uptime=result.uptime;
+						vm.totalram=result.totalram;
+						vm.memuse=result.memuse;
+						vm.cpuuse=result.cpuuse;
+						vm.rx=result.rx;
+						vm.tx=result.tx;
+					}
+				});
+			}
+		});
+	</script>
+</html>
