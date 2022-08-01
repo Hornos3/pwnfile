@@ -1,0 +1,5 @@
+#!/bin/sh
+
+util &
+echo 0 > /proc/sys/kernel/randomize_va_space
+cp /proc/kallsyms /var/tmp
