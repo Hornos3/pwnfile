@@ -2,6 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/NepCTF-2022/funny-guys(unsolved)/funny-guys-nep/attachment/glibc-all-in-one" vcs="Git" />
   </component>
 </project>
