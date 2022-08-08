@@ -13,7 +13,7 @@ rdi = 0x4006A3
 main_addr = 0x400607
 
 char_addr = [0x4003C4, 0x4003C1, 0x4003D6, 0x4003CF, 0x4003C9, 0x4003D8, 0x400246, 0x4003D8]
-char = [ord(x) for x in 'flag.txt']
+char = [ord(x) for x in 'flag']
 
 print(char)
 
