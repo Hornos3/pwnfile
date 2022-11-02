@@ -1,0 +1,10 @@
+/home/ubuntu/tools/clion-2022.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/ubuntu/tools/clion-2022.2.3/bin/ninja/linux/ninja -G Ninja -S /home/ubuntu/Desktop/pwnfile/kernel/challenges/D^3CTF2019-knote/rootfs -B /home/ubuntu/Desktop/pwnfile/kernel/challenges/D^3CTF2019-knote/rootfs/cmake-build-debug
+-- The C compiler identification is GNU 9.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ubuntu/Desktop/pwnfile/kernel/challenges/D^3CTF2019-knote/rootfs/cmake-build-debug
