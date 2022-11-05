@@ -1,4 +1,0 @@
-#!/bin/sh
-
-gcc ./myexp.c ./uffdexploit.c -o ./myexp --static -masm=intel -lpthread
-find . -print0 | cpio --null -ov --format=newc > ../rootfs.cpio

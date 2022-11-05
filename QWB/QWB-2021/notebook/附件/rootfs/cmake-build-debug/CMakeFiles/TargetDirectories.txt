@@ -1,3 +1,0 @@
-/root/Desktop/pwnfile/QWB/QWB-2021/notebook/附件/rootfs/cmake-build-debug/CMakeFiles/rootfs.dir
-/root/Desktop/pwnfile/QWB/QWB-2021/notebook/附件/rootfs/cmake-build-debug/CMakeFiles/edit_cache.dir
-/root/Desktop/pwnfile/QWB/QWB-2021/notebook/附件/rootfs/cmake-build-debug/CMakeFiles/rebuild_cache.dir

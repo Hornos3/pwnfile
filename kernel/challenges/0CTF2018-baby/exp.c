@@ -1,4 +1,3 @@
-// gcc -static exp.c -lpthread -o exp
 #include <string.h>
 char *strstr(const char *haystack, const char *needle);
 #define _GNU_SOURCE         /* See feature_test_macros(7) */

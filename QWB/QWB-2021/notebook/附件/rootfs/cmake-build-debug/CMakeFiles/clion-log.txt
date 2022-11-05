@@ -1,4 +1,0 @@
-/root/Desktop/CLion/CLion-2022.1.3/clion-2022.1.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/root/Desktop/CLion/CLion-2022.1.3/clion-2022.1.3/bin/ninja/linux/ninja -G Ninja -S /root/Desktop/pwnfile/QWB/QWB-2021/notebook/附件/rootfs -B /root/Desktop/pwnfile/QWB/QWB-2021/notebook/附件/rootfs/cmake-build-debug
--- Configuring done
--- Generating done
--- Build files have been written to: /root/Desktop/pwnfile/QWB/QWB-2021/notebook/附件/rootfs/cmake-build-debug
